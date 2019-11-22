@@ -1,0 +1,28 @@
+swagger: "2.0"
+basePath: /api/v1
+info:
+  version: 1.0.0
+  title: PCO Contentful service api
+  description: API to serve content from contentful and handle cache for pco applications
+consumes:
+  - application/json
+produces:
+  - application/json
+definitions:
+  health:
+    required:
+      - status
+    properties:
+      status:
+        type: string
+
+paths:
+  /health:
+    get:
+      description: HealthCheck to test communication
+      operationId: Ping
+      responses:
+        200:
+          description: Returns the matching applications
+          schema:
+            $ref: "#/definitions/health"

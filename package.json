@@ -1,0 +1,39 @@
+{
+  "name": "express-template",
+  "version": "1.0.0",
+  "description": "Template for express with config lib and docker",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "npm run lint",
+    "lint": "eslint src config"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salorrego/express-template.git"
+  },
+  "keywords": [
+    "express",
+    "docker",
+    "microservice",
+    "config"
+  ],
+  "author": "Salomon Orrego",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/salorrego/express-template/issues"
+  },
+  "homepage": "https://github.com/salorrego/express-template#readme",
+  "dependencies": {
+    "config": "3.2.4",
+    "express": "4.17.1",
+    "swagger-express-middleware": "2.0.4",
+    "winston": "3.2.1"
+  },
+  "devDependencies": {
+    "eslint": "6.6.0",
+    "eslint-config-airbnb": "18.0.1",
+    "eslint-plugin-import": "2.18.2",
+    "nodemon": "2.0.0"
+  }
+}
