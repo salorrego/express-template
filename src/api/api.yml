@@ -15,6 +15,12 @@ definitions:
     properties:
       status:
         type: string
+  path_example:
+    required:
+      - val
+    properties:
+      val:
+        type: string
 
 paths:
   /health:
@@ -26,3 +32,20 @@ paths:
           description: Returns the matching applications
           schema:
             $ref: "#/definitions/health"
+  /example/{value}:
+    post:
+      description: post an example and get same example description
+      parameters:
+        - value:
+          in: path
+          required: true
+          description: Value from path
+          schema:
+            type: string
+      responses:
+        201:
+          description: Created
+          schema:
+            $ref: "#/definitions/path_example"
+        400:
+          description: Bad Request, value cannot be parsed
