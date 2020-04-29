@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon app.js",
-    "test": "jest --detectOpenHandles",
+    "test": "jest --detectOpenHandles --coverage && coveralls < coverage/lcov.info",
     "lint": "eslint src config"
   },
   "repository": {
@@ -31,6 +31,7 @@
     "winston": "3.2.1"
   },
   "devDependencies": {
+    "coveralls": "3.1.0",
     "eslint": "6.6.0",
     "eslint-config-airbnb": "18.0.1",
     "eslint-plugin-import": "2.18.2",

@@ -23,14 +23,14 @@ describe('Path Example controller', () => {
     // Assert
     expect(res.status).toHaveBeenCalled();
     expect(res.json).toHaveBeenCalled();
-    expect(res.json).toHaveBeenCalledWith({ val: 'test' });
+    expect(res.json).toHaveBeenCalledWith({ val: 'TEST' });
   });
 
   it('Should be able to call the health check', (done) => {
     supertest(server.getApp())
       .get('/api/v1/path_example/testing_path_value')
       .then((response) => {
-        expect(response.body).toEqual({ val: 'testing_path_value' });
+        expect(response.body).toEqual({ val: 'TESTING_PATH_VALUE' });
         expect(response.status).toEqual(201);
         done();
       });
