@@ -26,7 +26,7 @@
   "homepage": "https://github.com/salorrego/express-template#readme",
   "dependencies": {
     "config": "3.2.4",
-    "express": "4.17.1",
+    "express": "4.17.3",
     "swagger-express-middleware": "2.0.4",
     "winston": "3.2.1"
   },
